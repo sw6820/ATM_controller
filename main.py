@@ -39,11 +39,11 @@ class User:
 
 if __name__ == '__main__':
     PIN = 1234
-    u1 = User(PIN)
+    u1 = User(PIN) # create user
     account_number=4321
-    u1.make_account(account_number)
+    u1.make_account(account_number) # create account
     card_insert = False
-    while not card_insert:
+    while not card_insert: # insert card
         number = input("insert card(press number 1): ")
         print(number)
         card_insert = number == '1'
@@ -51,11 +51,11 @@ if __name__ == '__main__':
             PIN = 1234
 
     account = False
-    while not account:
+    while not account: # check account
         account_number = int(input("insert account number: "))
         account = (account_number in u1.account_list)
     controller = True
-    while controller:
+    while controller: # select menu
         menu = input("insert number(0 out, 1 check balance, 2 deposit, 3 withdraw: ")
         if menu == '0':
             print('good bye')
